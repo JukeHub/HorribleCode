@@ -11,12 +11,18 @@ def subtract(number1, number2):
     number = number1
     number += number2
     return number - (number2 * 2)   # more complicated than it needs to be, too many unneeded steps
+
 def multiply(number1, number2):
-    pass
+    multiplied_number_after_for_loop = number1
+    for i in range(number2):
+        multiplied_number_after_for_loop += number1
+    multiplied_number_after_for_loop -= number1
+    return multiplied_number_after_for_loop         # too many steps, using code to correct incorrect code logic
+
 def divide(number1, number2):
     pass
 
-# absolutely unnecessary method. User can just enter ints or we can typecast strings on request.
+# absolutely unnecessary method. User can just enter ints, or we can typecast strings on request.
 # This makes YAGNI MAD.
 def string_to_int(word):
     char_map = {
@@ -40,3 +46,4 @@ number6 = 9
 
 print(add(number6, number5))
 print(subtract(number6, number5))
+print(multiply(number6, number5))
