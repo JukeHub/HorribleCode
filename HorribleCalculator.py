@@ -8,7 +8,9 @@ def add(number1, number2):
     return total
 
 def subtract(number1, number2):
-    pass
+    number = number1
+    number += number2
+    return number - (number2 * 2)   # more complicated than it needs to be, too many unneeded steps
 def multiply(number1, number2):
     pass
 def divide(number1, number2):
@@ -37,3 +39,4 @@ number5 = 5
 number6 = 9
 
 print(add(number6, number5))
+print(subtract(number6, number5))
