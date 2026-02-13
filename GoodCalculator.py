@@ -18,9 +18,21 @@ def divide(a,b):
 
 # main function to handle user input
 def main():
+    print("Welcome to Good Calculator!")
+    # KISS + YAGNI: implemented user input instead of hardcoded values to make the program simple, flexible, and reusable.
     num1 = int(input("Enter first number: "))
     num2 = int(input("Enter second number: "))
     operation = input("Choose operation (+, -, *, /): ")
-    pass
+
+    if operation == "+":
+        print(add(num1, num2))
+    elif operation == "-":
+        print(subtract(num1, num2))
+    elif operation == "*":
+        print(multiply(num1, num2))
+    elif operation == "/":
+        print(divide(num1, num2))
+    else:
+        print("Invalid operation")
 
 main()
